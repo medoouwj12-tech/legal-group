@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-i18n="contact_hero_title">Connect With Us | LEGAL PROTECTION GROUP</title>
+    <meta name="description" content="Get in touch with Legal Protection Group. Request a confidential consultation with our senior partners for corporate legal advice.">
+    <!-- Style Sheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <!-- HEADER / NAVIGATION -->
+    <header>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="img/logo.jpg" alt="LPG Logo" class="logo-img">
+                <div class="logo-text">
+                    <span class="logo-title" data-i18n="brand_title">LEGAL PROTECTION GROUP</span>
+                    <span class="logo-subtitle" data-i18n="brand_subtitle">INTERNATIONAL LAW FIRM</span>
+                </div>
+            </a>
+            <nav id="main-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link" data-i18n="nav_home">Home</a></li>
+                    <li><a href="about.html" class="nav-link" data-i18n="nav_about">About Us</a></li>
+                    <li><a href="services.html" class="nav-link" data-i18n="nav_services">Core Services</a></li>
+                    <li><a href="expertise.html" class="nav-link" data-i18n="nav_expertise">International Expertise</a></li>
+                    <li><a href="contact.html" class="nav-link" data-i18n="nav_contact">Contact Us</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <button id="lang-switcher" class="lang-switcher">العربية</button>
+                <a href="contact.html" class="btn btn-solid" style="padding: 0.6rem 1.4rem; font-size: 0.85rem;" data-i18n="nav_cta">Request Consultation</a>
+            </div>
+            <button id="burger-menu" class="burger-menu" aria-label="Toggle Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- INNER PAGE HERO -->
+        <section class="inner-hero">
+            <div class="container">
+                <h1 class="reveal" data-i18n="contact_hero_title">Connect With Us</h1>
+                <p class="reveal" data-i18n="contact_hero_desc">Immediate advisory access for corporate executives, investors, and business leaders.</p>
+            </div>
+        </section>
+
+        <!-- CONTACT DETAILS & FORM -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Glassmorphic Consultation Form -->
+                    <div class="contact-card reveal">
+                        <h2 data-i18n="contact_title" style="font-size: 1.8rem; margin-bottom: 1.5rem;">Request a Confidential Consultation</h2>
+                        <p data-i18n="contact_desc" style="margin-bottom: 3rem;">Connect with our senior partners. Fill out the consultation request below, and our legal team will reach out to you within 2 business hours.</p>
+                        
+                        <form id="consultation-form">
+                            <div class="form-group">
+                                <label for="client-name" class="form-label" data-i18n="contact_form_name">Full Name</label>
+                                <input type="text" id="client-name" class="form-control" data-i18n="contact_form_name_placeholder" placeholder="e.g., John Doe" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="client-company" class="form-label" data-i18n="contact_form_company">Company Name</label>
+                                <input type="text" id="client-company" class="form-control" data-i18n="contact_form_company_placeholder" placeholder="e.g., Global Enterprises Inc." required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="client-email" class="form-label" data-i18n="contact_form_email">Corporate Email Address</label>
+                                <input type="email" id="client-email" class="form-control" data-i18n="contact_form_email_placeholder" placeholder="e.g., john.doe@company.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="client-phone" class="form-label" data-i18n="contact_form_phone">Phone Number (with Country Code)</label>
+                                <input type="tel" id="client-phone" class="form-control" data-i18n="contact_form_phone_placeholder" placeholder="e.g., +20 100 123 4567" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="client-service" class="form-label" data-i18n="contact_form_service">Practice Area</label>
+                                <select id="client-service" class="form-control" required style="appearance: none; -webkit-appearance: none; background-image: radial-gradient(circle, var(--color-gold) 10%, transparent 10%);">
+                                    <option value="" disabled selected data-i18n="contact_form_service_select">-- Select Required Practice Area --</option>
+                                    <option value="corporate" data-i18n="service1_title">Corporate Law & Business Operations</option>
+                                    <option value="structuring" data-i18n="service2_title">Company Formation & Structuring</option>
+                                    <option value="ma" data-i18n="service3_title">Mergers & Acquisitions (M&A)</option>
+                                    <option value="arbitration" data-i18n="service4_title">Commercial Arbitration & Litigation</option>
+                                    <option value="banking" data-i18n="service5_title">Banking & Financial Services</option>
+                                    <option value="realestate" data-i18n="service6_title">Real Estate & Construction Law</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="client-message" class="form-label" data-i18n="contact_form_message">Consultation Details & Brief Case Context</label>
+                                <textarea id="client-message" class="form-control" data-i18n="contact_form_message_placeholder" placeholder="Please describe your legal requirements in brief..." required></textarea>
+                            </div>
+                            
+                            <button type="submit" class="btn btn-solid" style="width: 100%;" data-i18n="contact_form_submit">Submit Confidential Request</button>
+                            
+                            <div id="form-message" class="form-message"></div>
+                        </form>
+                    </div>
+                    
+                    <!-- Direct Info Column -->
+                    <div class="info-column reveal">
+                        <!-- Headquarters -->
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                            </div>
+                            <div class="info-text">
+                                <h3 data-i18n="contact_info_hq">Cairo Headquarters</h3>
+                                <p data-i18n="contact_info_hq_address">12 El-Gezira Street, Zamalek, Cairo, Egypt</p>
+                                <a href="https://maps.google.com/?q=%D9%86%D8%B2%D9%84%D8%A9+%D8%A7%D9%84%D8%A7%D9%82%D9%84%D9%8A%D9%85%D9%8A+%D8%A8%D8%AC%D9%88%D8%A7%D8%B1+%D8%A7%D9%84%D9%85%D8%B9%D9%87%D8%AF+%D8%A7%D9%84%D8%B9%D8%A7%D9%84%D9%89+%D9%84%D9%84%D9%87%D9%86%D8%AF%D8%B3%D8%A9+%D8%A7%D9%84%D8%A8%D8%A7%D8%AC%D9%88%D8%B1+%D8%A7%D9%84%D9%85%D9%86%D9%88%D9%81%D9%8A%D8%A9" target="_blank" style="color: var(--color-gold); font-size: 0.85rem; margin-top: 0.5rem; text-decoration: underline;">Open in Google Maps</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Phones -->
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                            </div>
+                            <div class="info-text">
+                                <h3 data-i18n="contact_info_phone">Direct Phone Line</h3>
+                                <a href="tel:+201000352580">+20 100 035 2580</a>
+                                <a href="tel:+201010000730">+20 101 000 0730</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Emails -->
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                            </div>
+                            <div class="info-text">
+                                <h3 data-i18n="contact_info_email">Corporate Inquiries</h3>
+                                 <a href="mailto:consult@lpg-law.com">consult@lpg-law.com</a>
+                                 <a href="mailto:info@lpg-law.com">info@lpg-law.com</a>
+                            </div>
+                        </div>
+                        
+                        <!-- Working Hours -->
+                        <div class="info-item">
+                            <div class="info-icon">
+                                <svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67V7z"/></svg>
+                            </div>
+                            <div class="info-text">
+                                <h3 data-i18n="contact_info_hours">Office Hours</h3>
+                                <p data-i18n="contact_info_hours_val">Sunday - Thursday | 9:00 AM - 6:00 PM (GMT+2)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-brand">
+                    <a href="index.html" class="logo" style="margin-bottom: 1.5rem;">
+                        <img src="img/logo.jpg" alt="LPG Logo" class="logo-img">
+                        <div class="logo-text">
+                            <span class="logo-title" data-i18n="brand_title">LEGAL PROTECTION GROUP</span>
+                            <span class="logo-subtitle" data-i18n="brand_subtitle">INTERNATIONAL LAW FIRM</span>
+                        </div>
+                    </a>
+                    <p data-i18n="footer_desc">An elite international law firm delivering tailored, world-class legal counsel with over 30 years of proven regional and global expertise.</p>
+                    <div class="social-links">
+                        <a href="https://linkedin.com" target="_blank" class="social-btn" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                        </a>
+                        <a href="https://twitter.com" target="_blank" class="social-btn" aria-label="X (Twitter)">
+                            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                        </a>
+                        <a href="https://facebook.com" target="_blank" class="social-btn" aria-label="Facebook">
+                            <svg viewBox="0 0 24 24"><path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"/></svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer_col_links">Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="index.html" data-i18n="nav_home">Home</a></li>
+                        <li><a href="about.html" data-i18n="nav_about">About Us</a></li>
+                        <li><a href="services.html" data-i18n="nav_services">Core Services</a></li>
+                        <li><a href="expertise.html" data-i18n="nav_expertise">International Expertise</a></li>
+                        <li><a href="contact.html" data-i18n="nav_contact">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer_col_services">Practice Areas</h4>
+                    <ul class="footer-links">
+                        <li><a href="services.html" data-i18n="service1_title">Corporate Law</a></li>
+                        <li><a href="services.html" data-i18n="service2_title">Company Formation</a></li>
+                        <li><a href="services.html" data-i18n="service3_title">Mergers & Acquisitions</a></li>
+                        <li><a href="services.html" data-i18n="service4_title">Commercial Arbitration</a></li>
+                        <li><a href="services.html" data-i18n="service5_title">Banking & Financial</a></li>
+                        <li><a href="services.html" data-i18n="service6_title">Real Estate Law</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4 data-i18n="footer_newsletter_title">Newsletter</h4>
+                    <p style="font-size: 0.85rem; margin-bottom: 1.2rem;" data-i18n="footer_newsletter_desc">Subscribe to receive monthly legal insights and regional updates.</p>
+                    <form id="footer-newsletter" class="newsletter-form">
+                        <div class="newsletter-input-group">
+                            <input type="email" class="newsletter-input" data-i18n="footer_newsletter_placeholder" placeholder="Your corporate email address" required>
+                            <button type="submit" class="newsletter-btn">→</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer_copyright">© 2026 Legal Protection Group. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#" data-i18n="footer_privacy">Privacy Policy</a>
+                    <a href="#" data-i18n="footer_terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/translations.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
