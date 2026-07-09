@@ -1,0 +1,427 @@
+/* =====================================================================
+   PREMIUM ANIMATIONS & EFFECTS
+   Author: Mohamed — Portfolio enhancement layer
+   Loaded AFTER style.css so it overrides nothing unless upgrading
+   ===================================================================== */
+
+/* ===========================
+   1. GLOBAL GRAIN OVERLAY
+   A subtle film-grain texture makes any dark theme feel expensive.
+   Pure CSS — no image request.
+   =========================== */
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.035;
+    mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 0.5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+    background-size: 180px 180px;
+}
+
+/* ===========================
+   2. CUSTOM CURSOR (gold dot)
+   Hidden on touch devices
+   =========================== */
+.lpg-cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 28px;
+    height: 28px;
+    border: 1.5px solid var(--color-gold);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10000;
+    transform: translate(-50%, -50%);
+    transition: width 0.25s ease, height 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, opacity 0.25s ease;
+    mix-blend-mode: difference;
+    will-change: transform;
+}
+
+.lpg-cursor.is-hover {
+    width: 52px;
+    height: 52px;
+    background-color: rgba(212, 175, 55, 0.18);
+    border-color: var(--color-gold-hover);
+}
+
+.lpg-cursor-dot {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    background: var(--color-gold);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 10001;
+    transform: translate(-50%, -50%);
+    will-change: transform;
+}
+
+@media (hover: none), (pointer: coarse) {
+    .lpg-cursor,
+    .lpg-cursor-dot {
+        display: none;
+    }
+}
+
+/* ===========================
+   3. REVEAL ENHANCEMENTS
+   Built on top of existing .reveal class — easier and richer
+   =========================== */
+.reveal {
+    opacity: 0;
+    transform: translateY(36px);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.reveal-active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Stagger helpers — apply lpg-stagger-1 .. lpg-stagger-8 to children */
+.lpg-stagger-1 { transition-delay: 0.05s !important; }
+.lpg-stagger-2 { transition-delay: 0.12s !important; }
+.lpg-stagger-3 { transition-delay: 0.19s !important; }
+.lpg-stagger-4 { transition-delay: 0.26s !important; }
+.lpg-stagger-5 { transition-delay: 0.33s !important; }
+.lpg-stagger-6 { transition-delay: 0.40s !important; }
+.lpg-stagger-7 { transition-delay: 0.47s !important; }
+.lpg-stagger-8 { transition-delay: 0.54s !important; }
+
+/* ===========================
+   4. SCROLL REVEAL VARIANTS
+   =========================== */
+.reveal-left {
+    opacity: 0;
+    transform: translateX(-48px);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-left.reveal-active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-right {
+    opacity: 0;
+    transform: translateX(48px);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-right.reveal-active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.reveal-scale {
+    opacity: 0;
+    transform: scale(0.92);
+    transition: opacity 0.9s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal-scale.reveal-active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* RTL inversion for left/right reveals */
+[dir="rtl"] .reveal-left {
+    transform: translateX(48px);
+}
+[dir="rtl"] .reveal-right {
+    transform: translateX(-48px);
+}
+
+/* ===========================
+   5. TEXT SCRUB / SPLIT REVEAL
+   Each word rises from a clip mask.
+   =========================== */
+.lpg-split-text {
+    display: inline-block;
+    overflow: hidden;
+    vertical-align: bottom;
+}
+
+.lpg-split-text > span {
+    display: inline-block;
+    transform: translateY(110%);
+    transition: transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lpg-split-text.reveal-active > span {
+    transform: translateY(0);
+}
+
+/* ===========================
+   6. CARD TILT (3D HOVER)
+   Add class="lpg-tilt" to any card.
+   =========================== */
+.lpg-tilt {
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 0.4s ease;
+    transform-style: preserve-3d;
+    will-change: transform;
+}
+
+.lpg-tilt:hover {
+    transform: translateY(-6px);
+}
+
+/* ===========================
+   7. GLOW BORDER ON HOVER
+   For service cards / team cards
+   =========================== */
+.lpg-glow {
+    position: relative;
+    isolation: isolate;
+}
+
+.lpg-glow::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg,
+        rgba(212, 175, 55, 0) 0%,
+        rgba(212, 175, 55, 0.6) 50%,
+        rgba(212, 175, 55, 0) 100%);
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    pointer-events: none;
+}
+
+.lpg-glow:hover::before {
+    opacity: 1;
+}
+
+/* ===========================
+   8. MAGNETIC BUTTON
+   Adds subtle pull toward cursor on buttons
+   =========================== */
+.lpg-magnetic {
+    transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+    will-change: transform;
+}
+
+/* ===========================
+   9. MARQUEE (infinite scroll)
+   =========================== */
+.lpg-marquee {
+    display: flex;
+    gap: 4rem;
+    overflow: hidden;
+    mask-image: linear-gradient(90deg,
+        transparent 0%,
+        #000 12%,
+        #000 88%,
+        transparent 100%);
+    -webkit-mask-image: linear-gradient(90deg,
+        transparent 0%,
+        #000 12%,
+        #000 88%,
+        transparent 100%);
+}
+
+.lpg-marquee__track {
+    display: flex;
+    gap: 4rem;
+    flex-shrink: 0;
+    animation: lpg-marquee-scroll 32s linear infinite;
+    align-items: center;
+}
+
+@keyframes lpg-marquee-scroll {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+}
+
+[dir="rtl"] .lpg-marquee__track {
+    animation-name: lpg-marquee-scroll-rtl;
+}
+
+@keyframes lpg-marquee-scroll-rtl {
+    from { transform: translateX(-50%); }
+    to   { transform: translateX(0); }
+}
+
+/* ===========================
+   10. ANIMATED GRADIENT BORDER (footer brand)
+   =========================== */
+@keyframes lpg-border-spin {
+    from { background-position: 0% 50%; }
+    to   { background-position: 100% 50%; }
+}
+
+.lpg-animated-border {
+    position: relative;
+    isolation: isolate;
+}
+
+.lpg-animated-border::before {
+    content: "";
+    position: absolute;
+    inset: -2px;
+    border-radius: inherit;
+    z-index: -1;
+    background: linear-gradient(90deg,
+        var(--color-gold),
+        #fff5d6,
+        var(--color-gold));
+    background-size: 200% 100%;
+    animation: lpg-border-spin 6s linear infinite;
+    opacity: 0.7;
+}
+
+/* ===========================
+   11. PARALLAX HELPER
+   Elements with [data-parallax="0.3"] move at 30% of scroll speed.
+   =========================== */
+.lpg-parallax {
+    will-change: transform;
+}
+
+/* ===========================
+   12. NUMBER COUNTER ANIMATION (enhanced)
+   Tabs numbers with a quick scale-up at the end.
+   =========================== */
+.lpg-counter {
+    display: inline-block;
+    font-variant-numeric: tabular-nums;
+    transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.lpg-counter.lpg-counter-pulse {
+    transform: scale(1.15);
+}
+
+/* ===========================
+   13. PULSE DOT (for live indicators)
+   =========================== */
+.lpg-pulse-dot {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--color-gold);
+    position: relative;
+}
+
+.lpg-pulse-dot::after {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: 50%;
+    border: 2px solid var(--color-gold);
+    opacity: 0;
+    animation: lpg-pulse 2s ease-out infinite;
+}
+
+@keyframes lpg-pulse {
+    0%   { transform: scale(1);    opacity: 0.7; }
+    100% { transform: scale(2.2);  opacity: 0;   }
+}
+
+/* ===========================
+   14. SMOOTH SCROLL PROGRESS BAR (top of page)
+   =========================== */
+.lpg-scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 3px;
+    width: 0%;
+    background: linear-gradient(90deg, var(--color-gold), #fff5d6);
+    z-index: 9998;
+    transition: width 0.05s linear;
+    box-shadow: 0 0 12px var(--color-gold-glow);
+}
+
+[dir="rtl"] .lpg-scroll-progress {
+    left: auto;
+    right: 0;
+}
+
+/* ===========================
+   15. MAGNETIC/INTERACTIVE LINK
+   Underline that draws on hover
+   =========================== */
+.lpg-underline {
+    position: relative;
+    display: inline-block;
+}
+
+.lpg-underline::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 100%;
+    height: 1px;
+    background: var(--color-gold);
+    transform: scaleX(0);
+    transform-origin: right center;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.lpg-underline:hover::after {
+    transform: scaleX(1);
+    transform-origin: left center;
+}
+
+/* ===========================
+   16. BACKDROP AMBIENT GLOW (hero)
+   Soft colored glow that breathes.
+   =========================== */
+@keyframes lpg-breathe {
+    0%, 100% { opacity: 0.45; transform: scale(1);    }
+    50%      { opacity: 0.7;  transform: scale(1.08); }
+}
+
+.lpg-ambient {
+    position: absolute;
+    width: 460px;
+    height: 460px;
+    border-radius: 50%;
+    background: radial-gradient(circle,
+        var(--color-gold-glow) 0%,
+        transparent 70%);
+    filter: blur(30px);
+    pointer-events: none;
+    animation: lpg-breathe 6s ease-in-out infinite;
+}
+
+/* ===========================
+   17. ACCESSIBILITY — prefers-reduced-motion
+   =========================== */
+@media (prefers-reduced-motion: reduce) {
+    .reveal,
+    .reveal-left,
+    .reveal-right,
+    .reveal-scale,
+    .lpg-split-text > span,
+    .lpg-tilt,
+    .lpg-magnetic,
+    .lpg-counter {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+    }
+    .lpg-marquee__track,
+    .lpg-pulse-dot::after,
+    .lpg-animated-border::before {
+        animation: none !important;
+    }
+}
