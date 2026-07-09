@@ -1,0 +1,28 @@
+# OS / Editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Node / build artefacts
+node_modules/
+dist/
+.cache/
+.parcel-cache/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Environment & secrets
+.env
+.env.local
+
+# Personal screenshot drafts (keep committed .gitkeep if needed)
+screenshots/*.png
+screenshots/*.jpg
+screenshots/*.gif
+!screenshots/.gitkeep
+
+# Optional: ignore Netlify deploy outputs if you ever wire up a build
+.netlify/

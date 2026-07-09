@@ -1,0 +1,44 @@
+# Netlify configuration for static hosting
+# Drag-and-drop deployment: visit https://app.netlify.com/drop
+# Or push to a Git repo and Netlify will use the settings below.
+
+[build]
+  publish = "."
+
+# No build command needed — this is pure static HTML/CSS/JS
+
+# Headers: cache static assets aggressively, send correct MIME types
+[[headers]]
+  for = "/*.html"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[headers]]
+  for = "/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/img/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+# Clean URLs (optional — uncomment if you want /contact instead of /contact.html)
+# [[redirects]]
+#   from = "/contact"
+#   to = "/contact.html"
+#   status = 200
+
+# Force HTTPS
+[[redirects]]
+  from = "http://*"
+  to = "https://:splat"
+  status = 301
+  force = true
