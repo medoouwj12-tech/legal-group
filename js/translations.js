@@ -95,8 +95,8 @@ const translations = {
     team3_name: "Eng. Nadia S. Mostafa",
     team3_title: "Partner — Head of Real Estate",
     team3_specialty: "Real Estate, Construction Law (FIDIC)",
-    team4_name: "Ahmed R. El-Sayed",
-    team4_title: "Partner — Litigation",
+    team4_name: "Mostafa El-Refai",
+    team4_title: "Founder",
     team4_specialty: "Commercial Arbitration, International Litigation",
     
     // Footer
@@ -258,8 +258,8 @@ const translations = {
     team3_name: "م. نادية س. مصطفى",
     team3_title: "شريك — رئيس قسم العقارات",
     team3_specialty: "قانون العقارات، قانون الإنشاءات (الفيديك)",
-    team4_name: "أحمد ر. السيد",
-    team4_title: "شريك — التقاضي",
+    team4_name: "مصطفى الرفاعي",
+    team4_title: "مؤسس",
     team4_specialty: "التحكيم التجاري، التقاضي الدولي",
     
     // Footer
