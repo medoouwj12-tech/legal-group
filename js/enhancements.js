@@ -13,8 +13,9 @@
     const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
     /* ------------------------------------------------------------
-       1. CUSTOM CURSOR
-       Two elements: a ring + a dot. Both lerp toward mouse position.
+       1. CUSTOM CURSOR (with idle-pause + reduced motion respect)
+       Two elements: a ring + a dot. Both lerp toward mouse position,
+       but PAUSE when the mouse is idle for >120ms to free up CPU.
        ------------------------------------------------------------ */
     if (!prefersReducedMotion && window.matchMedia("(hover: hover)").matches) {
         const ring = document.createElement("div");
@@ -31,16 +32,35 @@
         let ringY = mouseY;
         let dotX = mouseX;
         let dotY = mouseY;
+        let cursorRunning = false;
+        let lastMoveTime = 0;
 
         document.addEventListener("mousemove", (e) => {
             mouseX = e.clientX;
             mouseY = e.clientY;
+            lastMoveTime = performance.now();
+
+            // Wake the cursor loop if it was paused
+            if (!cursorRunning) {
+                cursorRunning = true;
+                animateCursor();
+            }
         });
 
         function animateCursor() {
+            // If mouse hasn't moved for 120ms, PAUSE the loop entirely
+            const idle = performance.now() - lastMoveTime;
+            if (idle > 120 && Math.abs(ringX - mouseX) < 0.5 && Math.abs(ringY - mouseY) < 0.5) {
+                cursorRunning = false;
+                // Snap to final position so we don't drift
+                ring.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+                dot.style.transform = `translate(${mouseX}px, ${mouseY}px) translate(-50%, -50%)`;
+                return;
+            }
+
             // Ring lags slightly behind dot for a polished feel
-            ringX += (mouseX - ringX) * 0.18;
-            ringY += (mouseY - ringY) * 0.18;
+            ringX += (mouseX - ringX) * 0.22;
+            ringY += (mouseY - ringY) * 0.22;
             dotX += (mouseX - dotX) * 0.6;
             dotY += (mouseY - dotY) * 0.6;
 
@@ -49,7 +69,7 @@
 
             requestAnimationFrame(animateCursor);
         }
-        animateCursor();
+        // Don't auto-start — only animate after the first mousemove
 
         // Hover target detection — anything clickable or marked .lpg-cursor-hover
         const hoverTargets = document.querySelectorAll(

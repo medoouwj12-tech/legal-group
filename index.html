@@ -5,10 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title data-i18n="hero_tag">International Law Firm | LEGAL PROTECTION GROUP</title>
     <meta name="description" content="An elite international law firm delivering tailored, world-class legal counsel with over 30 years of proven regional and global expertise.">
+    <!-- Performance: preconnect to Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;900&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"></noscript>
     <!-- Style Sheet -->
     <link rel="stylesheet" href="css/style.css">
     <!-- Premium Animations (cursor, grain, tilt, parallax, magnetic, etc.) -->
     <link rel="stylesheet" href="css/enhancements.css">
+    <!-- Custom overrides: pill buttons + perf knobs -->
+    <style>
+        /* Pill-shaped buttons everywhere — override rect radius */
+        .btn,
+        button,
+        input[type="submit"],
+        .lang-switcher,
+        .newsletter-btn,
+        .service-link {
+            border-radius: 999px !important;
+            padding-left: 2rem !important;
+            padding-right: 2rem !important;
+        }
+        .btn-solid,
+        .btn-outline {
+            padding-top: 0.85rem !important;
+            padding-bottom: 0.85rem !important;
+        }
+
+        /* Performance: turn off heavy filter/blur animations when many cards exist */
+        @media (prefers-reduced-motion: no-preference) {
+            /* Disable backdrop blur on anything that uses lpg-ambient breathing */
+            .lpg-ambient {
+                filter: blur(20px); /* was 30px */
+                transform: translateZ(0);
+                backface-visibility: hidden;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -16,7 +51,7 @@
     <header>
         <div class="container">
             <a href="index.html" class="logo">
-                <img src="img/logo.jpg" alt="LPG Logo" class="logo-img">
+                <img src="img/logo.jpg" alt="LPG Logo" class="logo-img" width="1024" height="1024">
                 <div class="logo-text">
                     <span class="logo-title" data-i18n="brand_title">LEGAL PROTECTION GROUP</span>
                     <span class="logo-subtitle" data-i18n="brand_subtitle">INTERNATIONAL LAW FIRM</span>
@@ -96,7 +131,7 @@
                 <div class="about-split">
                     <div class="about-img-frame reveal-left lpg-glow">
                         <div class="about-image" data-parallax="0.15">
-                            <img src="img/about.png" alt="LPG Boardroom" loading="lazy">
+                            <img src="img/about.webp" alt="LPG Boardroom" width="1024" height="1024" loading="lazy" decoding="async">
                         </div>
                     </div>
 
@@ -277,7 +312,7 @@
                     <!-- Lawyer 1 -->
                     <div class="team-card reveal">
                         <div class="team-photo">
-                            <img src="img/lawyer1.png" alt="Dr. Tarek M. Galal" loading="lazy">
+                            <img src="img/lawyer1.webp" alt="Dr. Tarek M. Galal" width="1024" height="1024" loading="lazy" decoding="async">
                         </div>
                         <div class="team-info">
                             <span class="team-title" data-i18n="team1_title">Founding & Managing Partner</span>
@@ -298,7 +333,7 @@
                     <!-- Lawyer 2 -->
                     <div class="team-card reveal">
                         <div class="team-photo">
-                            <img src="img/lawyer2.png" alt="Karim A. Hassan" loading="lazy">
+                            <img src="img/lawyer2.webp" alt="Karim A. Hassan" width="1024" height="1024" loading="lazy" decoding="async">
                         </div>
                         <div class="team-info">
                             <span class="team-title" data-i18n="team2_title">Senior Associate</span>
@@ -319,7 +354,7 @@
                     <!-- Lawyer 3 -->
                     <div class="team-card reveal">
                         <div class="team-photo">
-                            <img src="img/lawyer3.png" alt="Eng. Nadia S. Mostafa" loading="lazy">
+                            <img src="img/lawyer3.webp" alt="Eng. Nadia S. Mostafa" width="1024" height="1024" loading="lazy" decoding="async">
                         </div>
                         <div class="team-info">
                             <span class="team-title" data-i18n="team3_title">Partner — Head of Real Estate</span>
@@ -340,7 +375,7 @@
                     <!-- Lawyer 4 -->
                     <div class="team-card reveal">
                         <div class="team-photo">
-                            <img src="img/lawyer4.png" alt="Ahmed R. El-Sayed" loading="lazy">
+                            <img src="img/lawyer4.webp" alt="Ahmed R. El-Sayed" width="1024" height="1024" loading="lazy" decoding="async">
                         </div>
                         <div class="team-info">
                             <span class="team-title" data-i18n="team4_title">Partner — Litigation</span>
@@ -407,7 +442,7 @@
             <div class="footer-grid">
                 <div class="footer-col footer-brand">
                     <a href="index.html" class="logo lpg-animated-border" style="margin-bottom: 1.5rem; padding: 0.4rem; border-radius: 8px;">
-                        <img src="img/logo.jpg" alt="LPG Logo" class="logo-img">
+                        <img src="img/logo.jpg" alt="LPG Logo" class="logo-img" width="1024" height="1024">
                         <div class="logo-text">
                             <span class="logo-title" data-i18n="brand_title">LEGAL PROTECTION GROUP</span>
                             <span class="logo-subtitle" data-i18n="brand_subtitle">INTERNATIONAL LAW FIRM</span>
@@ -469,8 +504,8 @@
     </footer>
 
     <!-- Scripts -->
-    <script src="js/translations.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/enhancements.js"></script>
+    <script src="js/translations.js" defer></script>
+    <script src="js/main.js" defer></script>
+    <script src="js/enhancements.js" defer></script>
 </body>
 </html>
