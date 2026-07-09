@@ -7,6 +7,8 @@
     <meta name="description" content="An elite international law firm delivering tailored, world-class legal counsel with over 30 years of proven regional and global expertise.">
     <!-- Style Sheet -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Premium Animations (cursor, grain, tilt, parallax, magnetic, etc.) -->
+    <link rel="stylesheet" href="css/enhancements.css">
 </head>
 <body>
 
@@ -46,15 +48,15 @@
         <section class="hero">
             <div class="container">
                 <div class="hero-grid">
-                    <div class="hero-content reveal">
-                        <span class="hero-tag" data-i18n="hero_tag">International Law Firm</span>
-                        <h1 data-i18n="hero_title">A New Standard of Legal Solutions for Leading Corporations & Businesses</h1>
-                        <p class="lead-p" data-i18n="hero_subtitle">An elite international law firm delivering tailored, world-class legal counsel with over 30 years of proven regional and global expertise.</p>
-                        
-                        <div class="btn-group">
-                            <a href="contact.html" class="btn btn-solid" data-i18n="hero_cta_solid">Immediate Consultation</a>
-                            <a href="services.html" class="btn btn-outline" data-i18n="hero_cta_outline">Explore Services</a>
-                        </div>
+                <div class="hero-content reveal">
+                    <span class="hero-tag" data-i18n="hero_tag">International Law Firm</span>
+                    <h1 class="lpg-split" data-i18n="hero_title">A New Standard of Legal Solutions for Leading Corporations &amp; Businesses</h1>
+                    <p class="lead-p" data-i18n="hero_subtitle">An elite international law firm delivering tailored, world-class legal counsel with over 30 years of proven regional and global expertise.</p>
+
+                    <div class="btn-group">
+                        <a href="contact.html" class="btn btn-solid lpg-magnetic" data-i18n="hero_cta_solid">Immediate Consultation</a>
+                        <a href="services.html" class="btn btn-outline lpg-magnetic" data-i18n="hero_cta_outline">Explore Services</a>
+                    </div>
                         
                         <!-- Counters -->
                         <div class="hero-counters">
@@ -73,7 +75,7 @@
                         </div>
                     </div>
                     
-                    <div class="hero-graphic reveal">
+                    <div class="hero-graphic reveal" data-parallax="0.2">
                         <div class="graphic-ring graphic-ring-1"></div>
                         <div class="graphic-ring graphic-ring-2"></div>
                         <div class="graphic-ring graphic-ring-3"></div>
@@ -92,13 +94,13 @@
         <section class="about">
             <div class="container">
                 <div class="about-split">
-                    <div class="about-img-frame reveal">
-                        <div class="about-image">
+                    <div class="about-img-frame reveal-left lpg-glow">
+                        <div class="about-image" data-parallax="0.15">
                             <img src="img/about.png" alt="LPG Boardroom" loading="lazy">
                         </div>
                     </div>
-                    
-                    <div class="about-content reveal">
+
+                    <div class="about-content reveal-right">
                         <span class="hero-tag" data-i18n="about_tag">Corporate Overview</span>
                         <h2 data-i18n="about_title">Global Standards. Absolute Confidentiality.</h2>
                         <p data-i18n="about_p1">At Legal Protection Group, we operate at the intersection of local knowledge and international standards. Our firm provides legal defense and strategic partnership, ensuring our corporate clients navigate regulatory and operational challenges with total confidence.</p>
@@ -140,9 +142,9 @@
                     <p data-i18n="services_desc">Delivering top-tier, multi-jurisdictional legal solutions tailored for commercial excellence and risk mitigation.</p>
                 </div>
                 
-                <div class="services-grid">
+                <div class="services-grid lpg-stagger-children">
                     <!-- Service 1 -->
-                    <div class="service-card reveal">
+                    <div class="service-card reveal lpg-tilt lpg-glow">
                         <div class="service-icon">
                             <svg viewBox="0 0 24 24"><path d="M14 2H6c-1.1 0-1.99.9-1.99 2L4 20c0 1.1.89 2 1.99 2H18c1.1 0 2-.9 2-2V8l-6-6zm2 16H8v-2h8v2zm0-4H8v-2h8v2zm-3-5V3.5L18.5 9H13z"/></svg>
                         </div>
@@ -155,7 +157,7 @@
                     </div>
                     
                     <!-- Service 2 -->
-                    <div class="service-card reveal">
+                    <div class="service-card reveal lpg-tilt lpg-glow">
                         <div class="service-icon">
                             <svg viewBox="0 0 24 24"><path d="M12 7V3H2v18h20V7H12zm-6 12H4v-2h2v2zm0-4H4v-2h2v2zm0-4H4V9h2v2zm0-4H4V5h2v2zm10 12h-8v-2h8v2zm0-4h-8v-2h8v2zm0-4h-8V9h8v2zm4 8h-2v-2h2v2zm0-4h-2v-2h2v2z"/></svg>
                         </div>
@@ -168,7 +170,7 @@
                     </div>
                     
                     <!-- Service 3 -->
-                    <div class="service-card reveal">
+                    <div class="service-card reveal lpg-tilt lpg-glow">
                         <div class="service-icon">
                             <svg viewBox="0 0 24 24"><path d="M16 6l2.29 2.29-4.88 4.88-4-4L2 16.59 3.41 18l6-6 4 4 6.3-6.29L22 12V6h-6z"/></svg>
                         </div>
@@ -181,7 +183,7 @@
                     </div>
                     
                     <!-- Service 4 -->
-                    <div class="service-card reveal">
+                    <div class="service-card reveal lpg-tilt lpg-glow">
                         <div class="service-icon">
                             <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.75z"/></svg>
                         </div>
@@ -194,7 +196,7 @@
                     </div>
                     
                     <!-- Service 5 -->
-                    <div class="service-card reveal">
+                    <div class="service-card reveal lpg-tilt lpg-glow">
                         <div class="service-icon">
                             <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
                         </div>
@@ -207,7 +209,7 @@
                     </div>
                     
                     <!-- Service 6 -->
-                    <div class="service-card reveal">
+                    <div class="service-card reveal lpg-tilt lpg-glow">
                         <div class="service-icon">
                             <svg viewBox="0 0 24 24"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z"/></svg>
                         </div>
@@ -230,30 +232,30 @@
                     <p data-i18n="why_desc">Built on principles of excellence, integrity, and forward-thinking advocacy.</p>
                 </div>
                 
-                <div class="why-grid">
+                <div class="why-grid lpg-stagger-children">
                     <!-- Pillar 1 -->
-                    <div class="why-card reveal">
+                    <div class="why-card reveal lpg-glow">
                         <div class="why-num">01</div>
                         <h3 data-i18n="why_pillar1_title">Absolute Confidentiality</h3>
                         <p data-i18n="why_pillar1_desc">Protecting your corporate interests and sensitive information with absolute rigor.</p>
                     </div>
                     
                     <!-- Pillar 2 -->
-                    <div class="why-card reveal">
+                    <div class="why-card reveal lpg-glow">
                         <div class="why-num">02</div>
                         <h3 data-i18n="why_pillar2_title">Rapid Problem Solving</h3>
                         <p data-i18n="why_pillar2_desc">Delivering swift, creative, and robust solutions to complex regulatory challenges.</p>
                     </div>
                     
                     <!-- Pillar 3 -->
-                    <div class="why-card reveal">
+                    <div class="why-card reveal lpg-glow">
                         <div class="why-num">03</div>
                         <h3 data-i18n="why_pillar3_title">Elite Specialists</h3>
                         <p data-i18n="why_pillar3_desc">A handpicked team of legal experts with deep sector knowledge and global connections.</p>
                     </div>
                     
                     <!-- Pillar 4 -->
-                    <div class="why-card reveal">
+                    <div class="why-card reveal lpg-glow">
                         <div class="why-num">04</div>
                         <h3 data-i18n="why_pillar4_title">Long-Term Synergy</h3>
                         <p data-i18n="why_pillar4_desc">Working as a strategic partner to align legal frameworks with your business growth.</p>
@@ -271,7 +273,7 @@
                     <p data-i18n="team_desc">A distinguished team of attorneys and legal counselors with deep expertise across all practice areas.</p>
                 </div>
                 
-                <div class="team-grid">
+                <div class="team-grid lpg-stagger-children">
                     <!-- Lawyer 1 -->
                     <div class="team-card reveal">
                         <div class="team-photo">
@@ -404,7 +406,7 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-col footer-brand">
-                    <a href="index.html" class="logo" style="margin-bottom: 1.5rem;">
+                    <a href="index.html" class="logo lpg-animated-border" style="margin-bottom: 1.5rem; padding: 0.4rem; border-radius: 8px;">
                         <img src="img/logo.jpg" alt="LPG Logo" class="logo-img">
                         <div class="logo-text">
                             <span class="logo-title" data-i18n="brand_title">LEGAL PROTECTION GROUP</span>
@@ -469,5 +471,6 @@
     <!-- Scripts -->
     <script src="js/translations.js"></script>
     <script src="js/main.js"></script>
+    <script src="js/enhancements.js"></script>
 </body>
 </html>
