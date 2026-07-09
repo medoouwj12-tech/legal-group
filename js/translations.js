@@ -38,29 +38,7 @@ const translations = {
     about_feat_partner_desc: "Supporting your business growth beyond single transactions.",
     about_learn_more: "Learn More About Us",
     
-    // Services
-    services_tag: "Our Practice Areas",
-    services_title: "Core Legal Services",
-    services_desc: "Delivering top-tier, multi-jurisdictional legal solutions tailored for commercial excellence and risk mitigation.",
-    services_read_more: "Read More",
-    
-    service1_title: "Corporate Law & Business Operations",
-    service1_desc: "Drafting complex commercial contracts, ensuring regulatory compliance, and establishing solid legal governance frameworks for business operations.",
-    
-    service2_title: "Company Formation & Structuring",
-    service2_desc: "Setting up local and offshore companies, joint ventures, and drafting corporate bylaws aligned with regional and global legal standards.",
-    
-    service3_title: "Mergers & Acquisitions (M&A)",
-    service3_desc: "Providing complete transaction risk analysis, post-deal restructuring, legal due diligence, and representing clients in M&A negotiations.",
-    
-    service4_title: "Commercial Arbitration & Litigation",
-    service4_desc: "Representing high-profile clients before international courts, local chambers of commerce, and global arbitration tribunals.",
-    
-    service5_title: "Banking & Financial Services",
-    service5_desc: "Structuring capital markets compliance, advising on regional banking regulations, and securing cross-border investment protections.",
-    
-    service6_title: "Real Estate & Construction Law",
-    service6_desc: "Drafting major engineering and development contracts (FIDIC), managing complex licensing, and structuring high-value real estate portfolios.",
+    // Services (removed)
     
     // Why Us
     why_title: "Why Choose Our Firm",
@@ -84,25 +62,24 @@ const translations = {
     // Team / Our Professionals
     team_tag: "Our Professionals",
     team_title: "Meet Our Legal Experts",
-    team_desc: "A distinguished team of attorneys and legal counselors with deep expertise across all practice areas.",
+    team_desc: "A distinguished team of attorneys and legal counselors dedicated to protecting your interests.",
     team_cta: "View All Professionals",
     team1_name: "Dr. Tarek M. Galal",
     team1_title: "Founding & Managing Partner",
-    team1_specialty: "Corporate Law, M&A, International Arbitration",
+    team1_specialty: "",
     team2_name: "Karim A. Hassan",
     team2_title: "Senior Associate",
-    team2_specialty: "Banking & Finance, Capital Markets",
+    team2_specialty: "",
     team3_name: "Eng. Nadia S. Mostafa",
     team3_title: "Partner — Head of Real Estate",
-    team3_specialty: "Real Estate, Construction Law (FIDIC)",
+    team3_specialty: "",
     team4_name: "Mostafa El-Refai",
     team4_title: "Founder",
-    team4_specialty: "Commercial Arbitration, International Litigation",
+    team4_specialty: "",
     
     // Footer
     footer_desc: "An elite international law firm delivering tailored, world-class legal counsel with over 30 years of proven regional and global expertise.",
     footer_col_links: "Quick Links",
-    footer_col_services: "Practice Areas",
     footer_col_contact: "Contact Details",
     footer_newsletter_title: "Newsletter",
     footer_newsletter_desc: "Subscribe to receive monthly legal insights and regional updates.",
@@ -201,29 +178,7 @@ const translations = {
     about_feat_partner_desc: "ندعم نمو أعمالكم بما يتجاوز مجرد إنجاز المعاملات الفردية.",
     about_learn_more: "تعرف على المزيد عنا",
     
-    // Services
-    services_tag: "مجالات تخصصنا",
-    services_title: "خدماتنا القانونية الأساسية",
-    services_desc: "تقديم حلول قانونية رفيعة المستوى وعابرة للحدود مصممة لتحقيق التميز التجاري والحد من المخاطر.",
-    services_read_more: "اقرأ المزيد",
-    
-    service1_title: "قانون الشركات والعمليات التجارية",
-    service1_desc: "صياغة العقود التجارية المعقدة، وضمان الامتثال التنظيمي، وتأسيس أطر حوكمة قانونية متينة للعمليات التجارية.",
-    
-    service2_title: "تأسيس الشركات وهيكلتها",
-    service2_desc: "تأسيس الشركات المحلية والشركات خارج الحدود (Offshore)، والمشاريع المشتركة، وصياغة اللوائح الداخلية المتوافقة مع المعايير الإقليمية والدولية.",
-    
-    service3_title: "الدمج والاستحواذ (M&A)",
-    service3_desc: "تقديم تحليل متكامل لمخاطر الصفقات، وإعادة الهيكلة بعد إتمام الصفقة، والفحص النافي للجهالة القانوني، وتمثيل العملاء في المفاوضات.",
-    
-    service4_title: "التحكيم التجاري والتقاضي",
-    service4_desc: "تمثيل كبار العملاء والشركات أمام المحاكم الدولية وغرف التجارة المحلية وهيئات التحكيم العالمية.",
-    
-    service5_title: "الخدمات المصرفية والمالية",
-    service5_desc: "هيكلة الامتثال لأسواق المال، وتقديم الاستشارات بشأن اللوائح المصرفية الإقليمية، وتأمين حماية الاستثمارات العابرة للحدود.",
-    
-    service6_title: "قانون العقارات والإنشاءات",
-    service6_desc: "صياغة عقود التطوير والإنشاءات الكبرى (عقود الفيديك FIDIC)، وإدارة التراخيص المعقدة، وهيكلة المحافظ العقارية ذات القيمة العالية.",
+    // Services (removed)
     
     // Why Us
     why_title: "لماذا تختار مكتبنا",
@@ -247,25 +202,24 @@ const translations = {
     // Team / Our Professionals
     team_tag: "خبراؤنا القانونيون",
     team_title: "تعرف على فريقنا القانوني",
-    team_desc: "فريق متميز من المحامين والمستشارين القانونيين ذوي الخبرة العميقة في كافة مجالات القانون.",
+    team_desc: "فريق متميز من المحامين والمستشارين القانونيين ملتزم بحماية مصالحكم.",
     team_cta: "عرض جميع المحامين",
     team1_name: "د. طارق م. جلال",
     team1_title: "الشريك المؤسس والمدير التنفيذي",
-    team1_specialty: "قانون الشركات، الدمج والاستحواذ، التحكيم الدولي",
+    team1_specialty: "",
     team2_name: "كريم أ. حسن",
     team2_title: "مستشار أول",
-    team2_specialty: "الخدمات المصرفية والمالية، أسواق المال",
+    team2_specialty: "",
     team3_name: "م. نادية س. مصطفى",
     team3_title: "شريك — رئيس قسم العقارات",
-    team3_specialty: "قانون العقارات، قانون الإنشاءات (الفيديك)",
+    team3_specialty: "",
     team4_name: "مصطفى الرفاعي",
     team4_title: "مؤسس",
-    team4_specialty: "التحكيم التجاري، التقاضي الدولي",
+    team4_specialty: "",
     
     // Footer
     footer_desc: "نخبة من المستشارين الدوليين لتقديم استشارات قانونية عالمية مصممة خصيصاً لتلبية احتياجات أعمالكم، بأكثر من 30 عاماً من الخبرة الإقليمية الدولية المثبتة.",
     footer_col_links: "روابط سريعة",
-    footer_col_services: "مجالات التخصص",
     footer_col_contact: "بيانات الاتصال",
     footer_newsletter_title: "النشرة الإخبارية",
     footer_newsletter_desc: "اشترك لتلقي التحليلات القانونية الشهرية والتحديثات الإقليمية.",
